@@ -4,9 +4,9 @@ from flask import Flask, render_template, session, request
 app = Flask(__name__)
 # This is a test to verify that falsk works
 # flask will be used to upload html to the website
-#@app.route('/hello')
-#def hello_flask():
-    #return 'Hello from flask\n'
+@app.route('/hello')
+def hello_flask():
+    return 'Hello from flask\n'
     
 
     
