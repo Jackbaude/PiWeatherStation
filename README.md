@@ -10,3 +10,8 @@ sudo apt-get install sqlite3
 ```
 # sudo apt-get install flask
 ```
+### Make SQlite data table 
+
+```
+sqlite3 mydatabase.db
+```
