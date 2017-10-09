@@ -17,3 +17,6 @@ sqlite3 mydatabase.db
 ```
 # sudo apt-get install flask
 ```
+### Use the Adafruit .git for the ADS1115
+
+https://github.com/adafruit/Adafruit_Python_ADS1x15
