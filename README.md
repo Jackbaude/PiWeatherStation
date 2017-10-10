@@ -20,3 +20,6 @@ sqlite3 mydatabase.db
 ### Use the Adafruit .git for the ADS1115
 
 https://github.com/adafruit/Adafruit_Python_ADS1x15
+
+
+### Use python sql library to create/insert/read data (files are under 
