@@ -12,16 +12,13 @@ def get_random(a,b):
 def get_voltage():
     return  adc.read_adc(3, gain=GAIN)
 
-def get_voltage_4sec():
-    while True:
-        print (get_voltage()*4.096/32767)
-        time.sleep(4)
-        
+
+
 
 
 conn = sqlite3.connect('test.db')
 
-windspeed = get_voltage()
+windspeed = (get_voltage()*4.096/32767)
 pressure = get_random(0,39)
 temp = get_random(32, 99)
 date = datetime.now()
