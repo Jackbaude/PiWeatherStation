@@ -22,4 +22,4 @@ sqlite3 mydatabase.db
 https://github.com/adafruit/Adafruit_Python_ADS1x15
 
 
-### Use python sql library to create/insert/read data (files are under 
+### Use python sql library to create/insert/read data (files are under MysqlPython)
