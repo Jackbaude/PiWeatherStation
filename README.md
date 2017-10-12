@@ -19,7 +19,7 @@ sudo apt-get install sqlite3
 git clone https://github.com/adafruit/Adafruit_Python_ADS1x15.git
 ```
 
-### Use python sql library to create/insert/read data (files are under MysqlPython)
+#### Use python sql library to create/insert/read data (files are under MysqlPython)
 
 ### Edit SQlite data table 
 
