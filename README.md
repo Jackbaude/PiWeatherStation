@@ -31,6 +31,9 @@ wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPy
 wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/createdb.py
 ```
 
+## Edit this code
+#### Note the sensors I am using output voltage and I had to do math on, If you choose to use differennt sensors make sure to change the vaules in datacollecting.py
+
 
 ### Edit SQlite data table 
 
