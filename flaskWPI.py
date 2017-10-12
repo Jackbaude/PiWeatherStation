@@ -1,4 +1,15 @@
 from flask import Flask, render_template, session, request
+import sqlite3
+
+
+
+conn = sqlite3.connect('test2.db')
+cursor = conn.execute("SELECT windspeed, pressure, temp, date from WEATHER")
+results = cursor.fetchall()
+
+print("The DB has {} records".format(len(results)))
+
+
 
 
 app = Flask(__name__)
@@ -6,7 +17,13 @@ app = Flask(__name__)
 @app.route('/hello')
 def hello_flask():
     return 'Hello from flask\n'
-    
+
+
+
+@app.route('/sqlone')
+def sqlone():
+    return render_template('sqltest.html', varible = '1234')
+        
 
     
 
