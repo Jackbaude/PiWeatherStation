@@ -25,10 +25,10 @@ git clone https://github.com/adafruit/Adafruit_Python_ADS1x15.git
 wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/InsertData.py
 ```
 ```
-https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/Readdb.py
+wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/Readdb.py
 ```
 ```
-https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/createdb.py
+wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/createdb.py
 ```
 
 
