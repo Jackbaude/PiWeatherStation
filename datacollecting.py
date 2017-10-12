@@ -1,3 +1,10 @@
+# Jack B
+# Make sure to download the adafruit_ads1x15 .git
+#tutorial >> https://learn.adafruit.com/raspberry-pi-analog-to-digital-converters/ads1015-slash-ads1115
+#the .git >> https://github.com/adafruit/Adafruit_Python_ADS1x15
+
+
+
 import Adafruit_ADS1x15
 import sqlite3
 import time
@@ -8,19 +15,22 @@ GAIN = 1
 
 def get_random(a,b):
     return random.uniform(a,b)
-
-def get_voltage():
+def get_windspeed():
     return  adc.read_adc(3, gain=GAIN)
-
+def get_temp():
+    return  adc.read_adc(2, gain=GAIN)
+def get_pressure():
+    return  adc.read_adc(1, gain=GAIN)
+    
 
 
 
 
 conn = sqlite3.connect('test.db')
 
-windspeed = (get_voltage()*4.096/32767)
-pressure = get_random(0,39)
-temp = get_random(32, 99)
+windspeed = (get_windspeed()*4.096/32767)
+pressure = (get_temp()*4.096/32767)
+temp = (get_pressure()*4.096/32767)
 date = datetime.now()
 
 
