@@ -5,7 +5,7 @@
 # Install libraries
 
 
-## Install sqlite
+### Install sqlite
 ```
 sudo apt-get install sqlite3
 ```
