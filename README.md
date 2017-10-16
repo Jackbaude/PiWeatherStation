@@ -31,11 +31,11 @@ wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPy
 wget https://raw.githubusercontent.com/Jackbaude/PiWeatherStation/master/MysqlPython/createdb.py
 ```
 ### Run the create.db once to create the database. You can name it what ever you want, in the code we called it 'test'.
-## Edit this code
+
 #### Note the sensors I am using output voltage and I had to do math on, If you choose to use differennt sensors make sure to change the vaules in datacollecting.py
 
 
-### Edit SQlite data table 
+### Edit SQlite data table from raspberry pi terminal. Otherwise you can edit the table when you make it in createdata.py
 
 ```
 sqlite3 mydatabase.db
