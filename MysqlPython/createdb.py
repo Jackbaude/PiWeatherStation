@@ -2,7 +2,7 @@
 
 import sqlite3
 
-conn = sqlite3.connect('test.db')
+conn = sqlite3.connect('WeatherStation.db')
 #change the name of test.db to whatever you would like to call your database
 conn.execute('''CREATE TABLE WEATHER
          (WINDSPEED  FLOAT NOT NULL,
