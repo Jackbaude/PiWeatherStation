@@ -10,8 +10,18 @@ import sqlite3
 import time
 import random
 from datetime import datetime
+import os
+import sys
+
 adc = Adafruit_ADS1x15.ADS1115()
 GAIN = 1
+
+db_path = "WeatherStation.db"
+
+# Let's first check to make sure the DB exists and if
+# not, exit the program with an error.
+if not os.path.exists(db_path):
+    sys.exit("The DB {} does not exist".format(db_path))
 
 #def get_random(a,b):
     #return random.uniform(a,b)
@@ -25,7 +35,7 @@ def get_pressure():
 
 
 
-conn = sqlite3.connect('WeatherStation.db')
+conn = sqlite3.connect(db_path)
 
 tempv= (get_temp()*4.096/32767)
 tempc = (tempv - 0.5) / 0.01
