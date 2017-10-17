@@ -25,13 +25,14 @@ def get_pressure():
 
 
 
-
 conn = sqlite3.connect('WeatherStation.db')
-tempv= (get_temp()*4.096/32767)
 
-windspeed = (get_windspeed()*4.096/32767)
+tempv= (get_temp()*4.096/32767)
 tempc = (tempv - 0.5) / 0.01
 tempf = (tempc * 1.8) + 32
+
+windspeed = (get_windspeed()*4.096/32767)
+
 pressure = (get_pressure()*4.096/32767)
 date = datetime.now()
 
