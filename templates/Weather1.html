@@ -1,11 +1,31 @@
 <!doctype html>
 <html>
-		<head>
-			<title> Jacks Raspberry Pi Weather Station </title>
-		<head/>
-		<h1 style="text-align:center;"> Jacks Weather Pi </h1>
-		<p> Todays date is {{date}} <P>
-		<p> The temperature is {{TEMF}} degrees fahrenheit And {{TEMC}} degrees celcuis </p>
+	<head>
+		<title> Jacks Raspberry Pi Weather Station </title>
+	<head/>
+	<style> 
+	body {
+    background-color:#ADD8E6 ;
+    }
+	</style>
+	<body>
+		<script>
+		function reload(){
+		location.reload();	
+		}
+		function goto(){
+			window.location.href="http://10.0.0.210:5000/New.html";
+			}
+		</script>
 		
-
+		<div style="color:black">
+			<h1 style="text-align:center;"> Jack's Weather </h1>
+			<p><font size="5" face="impact"> Todays date is {{date}}</font><P>
+			<p><font size="5" face="verdana">The temperature is {{TEMF}} degrees Fahrenheit or {{TEMC}} degrees Celsius</font></p>
+		</div>
+		<div>
+			<p><button onclick="reload()">Update Weather</button></p>
+			<p><button onclick="goto()"> Go to </button>
+		</div>
+	</body>
 </html>
