@@ -1,5 +1,5 @@
 # Jack B
-#I have implemeted both FlaskWPI and Weather into one script, this way i can check the database and the current weather on one server.
+#I have implemeted both FlaskWPI.py and Weather.py into one script, this way I can check the database and the current weather on one server.
  
 import sqlite3
 from flask import Flask, render_template, session, request
