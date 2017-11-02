@@ -5,27 +5,81 @@
 	<head/>
 	<style> 
 	body {
-    background-color:#ADD8E6 ;
+    background-color:#EC8772 ;
     }
+	.button {
+    background-color: #40494D; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	}
+	 h1 {
+	 font-family: verdana;
+	 text-align:center;
+	 font-size: 300%;
+	 } 
+	h2 {
+	font-family: verdana;
+	text-align:left;
+	font-size: 200%;
+	}
+	div.bottom {
+	postion: absolute;
+	bottom: 5px;
+	}	
 	</style>
-	<body>
+	
 		<script>
 		function reload(){
 		location.reload();	
 		}
 		function goto(){
-			window.location.href="http://10.0.0.210:5000/New.html";
+			window.location.href="http://10.0.0.210:5000/sqlone";
 			}
-		</script>
+		function NOAA(){
+			window.location.href="http://forecast.weather.gov/MapClick.php?lat=44.95&lon=-93.28#.WfTt3mhSyHs";
+		}
+		function startTime() {
+		    var today = new Date();
+		    var h = today.getHours();
+		    var m = today.getMinutes();
+		    var s = today.getSeconds();
+		    m = checkTime(m);
+		    s = checkTime(s);
+		    document.getElementById('time').innerHTML =
+		    h + ":" + m + ":" + s;
+		    var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
 		
+		
+		
+		</script>
+	<body onload="startTime()">
 		<div style="color:black">
-			<h1 style="text-align:center;"> Jack's Weather </h1>
-			<p><font size="5" face="impact"> Todays date is {{date}}</font><P>
+			<h1> Jack's Weather </h1>
+			<p><font size="5" face="Gerogia"> Todays date is {{date}}</font><P>
+			<div id="time"></div>
 			<p><font size="5" face="verdana">The temperature is {{TEMF}} degrees Fahrenheit or {{TEMC}} degrees Celsius</font></p>
+			<p><font size="5" face="verdana">The current wind speed is {{windspeed}} miles per hour</font></p>
 		</div>
 		<div>
-			<p><button onclick="reload()">Update Weather</button></p>
-			<p><button onclick="goto()"> Go to </button>
+			<p><button class="button" onclick="reload()">Update Weather</button></p>
+			<h2> More options.. </h2>
+			<p><button class="button" onclick="goto()"> Go to the data base </button>
+			<p><button class="button" onclick="NOAA()"> Go to the NOAA Minneapolis page</button>
 		</div>
+		<div style="position: absolute; bottom: 5px;">
+	    <p> {{battery}} </p>
+   	    </div>
 	</body>
 </html>
